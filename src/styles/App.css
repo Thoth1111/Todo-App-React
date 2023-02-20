@@ -11,6 +11,11 @@
     height: 100vh;
     font-weight: 400;
   }
+  .navbar {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+}
   .wrapper {
     width: 100%;
     padding: 8rem 20px 3rem;

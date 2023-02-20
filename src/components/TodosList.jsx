@@ -1,8 +1,9 @@
-const TodosList = (props) => {
+import TodoItem from '@/components/TodoItem';
+const TodosList = ( { todosProps }) => {
     return (
       <ul>
-        {props.todosProps.map((todo) => (
-          <li>{todo.title}</li>
+        {todosProps.map((todo) => (
+        <TodoItem />
         ))}
       </ul>
     );

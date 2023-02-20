@@ -1,4 +1,5 @@
 import InputTodo from '@/components/InputTodo';
+import TodosList from '@/components/TodosList';
 
 const TodosLogic = () => {
     const todos = [
@@ -21,11 +22,7 @@ const TodosLogic = () => {
     return (
         <div>
         < InputTodo />
-        <ul>
-        {todos.map((todo) => (
-          <li>{todo.title}</li>
-        ))}
-      </ul>
+        <TodosList todosProps={todos} />
       </div>
     )
   }

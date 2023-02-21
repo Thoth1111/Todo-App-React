@@ -16,10 +16,6 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
     textDecoration: 'line-through',
   };
 
-  const handleEditing = () => {
-    setEditing(true);
-  };
-
   let viewMode = {};
   let editMode = {};
   if (editing) {
@@ -27,6 +23,10 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
   } else {
     editMode.display = 'none';
   }
+
+  const handleEditing = () => {
+    setEditing(true);
+  };
 
   const handleUpdatedDone = (event) => {
     if (event.key === 'Enter') {
@@ -55,7 +55,7 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
         type="text"
         value={itemProp.title}
         className={styles.textInput}
-        style={viewMode}
+        style={editMode}
         onChange={(e) => setUpdate(e.target.value, itemProp.id)}
         onKeyDown={handleUpdatedDone}
       />

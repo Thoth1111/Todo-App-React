@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, useNavigate  } from "react-router-dom";
 import { useAuthContext } from '@/context/AuthContext';
 import { MdClose } from 'react-icons/md';

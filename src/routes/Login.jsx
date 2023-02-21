@@ -14,7 +14,6 @@ const Login = () => {
     if (!username) return;
     login(username);
     setUsername('');
-    navigate('/', { replace: true });
     navigate(from, { replace: true });
   };
   return (
